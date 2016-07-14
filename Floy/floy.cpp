@@ -54,6 +54,7 @@ void Floy::GetNeighbors()
         }
         neighbors.append(Widget::floys.at(minp));
         qDebug()<<"----ngdist:"<<i<<" dist:"<<ngDists.at(minp);
+		ngDists.replace(minp,0);//将当前找到的最小置零
     }
 
     //计算当前邻居中心位置
